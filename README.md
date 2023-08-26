@@ -1,8 +1,8 @@
 # Harden GhostBSD 
 
-![](images/harden-ghostbsd-preview.jpg)
+![](images/harden-ghostbsd-preview.png)
 
-GhostBSD officially defaults to [Permanently Insecure Mode](https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7&manpath=freebsd-release#SECURING_THE_KERNEL_CORE,_RAW_DEVICES,_AND_FILE%09SYSTEMS). Any directive can be set and re-set with a customizable `settings.ini` for administering, tuning, and easier jail management. All existing entries in all confs will remain untouched unless they are modified in the settings file.
+Any directive can be set and re-set with a customizable `settings.ini` for administering, tuning, and easier jail management. All existing entries in all confs will remain untouched unless they are modified in the settings file.
 
 This script is also targeted to new users of GhostBSD so that they may leverage years of security contributions by the entire BSD community across all spectra, implemented on thier system in seconds.
 
@@ -10,8 +10,8 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 
 ---
 ## Known Incompatibilities (Insecure)
-* **Firefox, Chromium** explicity uses shared memory, conflics with kern.elf64.allow_wx
-* Linux Binary Compatability, VirtualBox shared folders, conflicts with kern.securelevel
+* **Firefox, Chromium** explicity uses shared memory, conflicts with `kern.elf64.allow_wx`
+* Linux Binary Compatability, VirtualBox shared folders, conflicts with `kern.securelevel`
 
 
 ## Verified Compatible
@@ -24,7 +24,7 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 
 ## Includes
 * Desktop Wallpapers as a special gift to users of the Software
-* Directory (Hier)archy Visual Map in PDF Form
+* Directory (Hier)archy Visual Map, PDF, in /docs
 
 
 ---
@@ -96,7 +96,7 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 ---
 
 
-## Features
+## Main Features
 
 * Makes backups of `rc.conf`, `sysctl.conf`, `login.conf`, and `loader.conf` on first run
 * Sets passwords to blowfish encryption
