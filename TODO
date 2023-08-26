@@ -1,0 +1,12 @@
+Add incremental backups to as to revert to another conf, maybe in /var/db/.
+You can get rid of this manual editing, right?:
+
+[SCRIPT]
+first_run = True
+
+Since the script needs to run as root, and the files you're copying are all pretty small, you can create dirs. inside, 
+say, /var/db/<script-name> based on, let's say, date +%s (+ a pristine directory for the first-run backup). This way, one can make multiple changes, 
+and then roll-back to any of the previous versions. Do a diff even. etc...
+
+
+* Check for duplicates

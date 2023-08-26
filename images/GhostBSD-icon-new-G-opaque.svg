@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 325 325" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="White-highlight-ring" serif:id="White highlight ring" transform="matrix(1,0,0,1,-87.5,-87.5)">
+        <path d="M100.034,253.221C100.011,252.15 100,251.076 100,250C100,191.194 133.913,140.246 183.232,115.664C203.344,105.64 226.019,100 250,100C332.787,100 400,167.213 400,250C400,332.787 332.787,400 250,400C248.897,400 247.798,399.988 246.701,399.964C286.738,399.079 322.753,381.741 348.26,354.443C376.626,328.197 394.398,290.642 394.398,248.964C394.398,169.695 330.109,105.338 250.923,105.338C209.597,105.338 172.328,122.866 146.138,150.895C118.489,176.478 100.906,212.805 100.034,253.221Z" style="fill:white;"/>
+    </g>
+    <g id="Outermost-ring" serif:id="Outermost ring" transform="matrix(0.958244,0,0,1.0494,-77.2666,-102.055)">
+        <path d="M250.215,109.163C336.609,109.163 406.751,173.211 406.751,252.101C406.751,330.991 336.609,395.04 250.215,395.04C163.82,395.04 93.678,330.991 93.678,252.101C93.678,196.064 129.069,147.514 180.537,124.09C201.526,114.537 225.188,109.163 250.215,109.163Z" style="fill:none;stroke:black;stroke-width:0.83px;"/>
+    </g>
+    <g id="Blue-outside-mobius" serif:id="Blue outside mobius" transform="matrix(1,0,0,1,-87.5,-87.5)">
+        <path d="M243.475,112.749C322.662,112.749 386.951,177.106 386.951,256.375C386.951,335.644 322.662,400 243.475,400C164.289,400 100,335.644 100,256.375C100,177.106 164.289,112.749 243.475,112.749ZM250.923,105.338C330.109,105.338 394.398,169.695 394.398,248.964C394.398,328.233 330.109,392.589 250.923,392.589C171.736,392.589 107.447,328.233 107.447,248.964C107.447,169.695 171.736,105.338 250.923,105.338Z" style="fill:rgb(13,202,242);stroke:black;stroke-width:0.83px;"/>
+    </g>
+    <g id="First-Inner-Circles" serif:id="First Inner Circles" transform="matrix(1,0,0,1,-87.5,-87.5)">
+        <g transform="matrix(0.994572,0,0,0.994572,1.35896,1.35405)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.42px;stroke-dasharray:0.42,1.68,0.42,1.68,0.42,1.68;"/>
+        </g>
+        <g transform="matrix(1.05391,0,0,1.05391,-13.498,-13.4492)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.4px;stroke-dasharray:0.4,1.58,0.4,1.58,0.4,1.58;"/>
+        </g>
+        <g transform="matrix(1.02909,0,0,1.02909,-7.28249,-7.25616)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.81px;"/>
+        </g>
+        <g transform="matrix(0.952588,0,0,0.952588,11.8709,11.828)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.44px;stroke-dasharray:0.44,1.75,0.44,1.75,0.44,1.75;"/>
+        </g>
+        <g transform="matrix(0.907651,0,0,0.907651,23.1221,23.0385)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.46px;stroke-dasharray:0.46,1.84,0.46,1.84,0.46,1.84;"/>
+        </g>
+        <g transform="matrix(0.867872,0,0,0.867872,33.0817,32.9621)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.48px;stroke-dasharray:0.48,1.92,0.48,1.92,0.48,1.92;"/>
+        </g>
+    </g>
+    <g id="Inner-Circles" serif:id="Inner Circles" transform="matrix(1,0,0,1,-87.5,-87.5)">
+        <g transform="matrix(0.713698,0,0,0.713698,71.6833,71.4241)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.58px;stroke-dasharray:0.58,2.34,0.58,2.34,0.58,2.34;"/>
+        </g>
+        <g transform="matrix(0.756279,0,0,0.756279,61.0221,60.8014)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.55px;stroke-dasharray:0.55,2.2,0.55,2.2,0.55,2.2;"/>
+        </g>
+        <g transform="matrix(0.738465,0,0,0.738465,65.4823,65.2455)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:1.13px;"/>
+        </g>
+        <g transform="matrix(0.68357,0,0,0.68357,79.2266,78.9401)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.61px;stroke-dasharray:0.61,2.44,0.61,2.44,0.61,2.44;"/>
+        </g>
+        <g transform="matrix(0.651324,0,0,0.651324,87.3004,86.9847)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.64px;stroke-dasharray:0.64,2.56,0.64,2.56,0.64,2.56;"/>
+        </g>
+        <g transform="matrix(0.622779,0,0,0.622779,94.4473,94.1058)">
+            <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.67px;stroke-dasharray:0.67,2.68,0.67,2.68,0.67,2.68;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-92.8625,-46.1821)">
+        <g transform="matrix(83.3333,0,0,83.3333,291.679,240.473)">
+        </g>
+        <text x="220.845px" y="240.473px" style="font-family:'nebulax';font-size:83.333px;fill-opacity:0.5;">G</text>
+    </g>
+</svg>
