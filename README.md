@@ -22,17 +22,22 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 ---
 
 
+## Includes
+* Desktop Wallpapers as a special gift to users of the Software
+* Directory (Hier)archy Visual Map in PDF Form
+
+
+---
+
+
 ## FreeBSD Security Advisories
 ### Remote denial of service in IPv6 fragment reassembly
 * `net.inet6.ip6.maxfrags = 0` [(*)](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:06.ipv6.asc)
     * **Official FreeBSD Security Advisory Workaround** 
     * If using pf to scrub framents you do **not** need this workaround
     * Add the directive above to `[SYSTEM} settings.ini` if not using pf scrub, and until you can safely patch the system
-    ```
-    root@freebsd:~# freebsd-update fetch
-    root@freebsd:~# freebsd-update install
-    root@freebsd:~# shutdown -r +10min "Rebooting for a security update"
-    ```
+
+
 ### Downfall Intel CPU Vulnerability
 * https://downfall.page/
     * Computing devices based on Intel Core processors from the 6th Skylake to (including) the 11th Tiger Lake generation are affected.
@@ -42,28 +47,15 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 ---
 
 ## New Features in 3.0.1
-* ZenBleed Workaround
+* ZenBleed Workaround with CPU microcode updating
 * CPU microcode updating enabled in anticipation of Zenbleed and Downfall Patches
-* **Desktop Wallpapers as a special gift to users of the Software**
-    * All Original Digital Artists recieve automatic Copyright. Supplemental License [here](digital art/Quadhelion Engineering Universal Digital Art License.md).
-    * Eric Turgeon, GhostBSD Operating System, and GhostBSD Team are hereby granted unlimited use of the Art, provided credit to myself is given on the main website while the art is in use.
-
-
-## August 11, 2023 Changelog
-* The rc script has been updated for better performance and stability 
-    * There is no positive value cases I can find for removing the chicken-bit during operation which on the contrary may produce unexpected results as with other workarounds of this type
-    * Rebooting without the rc script running returns the OS to an unset chicken-bit state which obviates the need to have a `rc` chicken-bit removal function. 
-        * The user chooses the workaround or not without the rc script making available CPU state changes while in operation possibly inducing kernel panics
-        * Simply using the `remove` argument and rebooting will return the AMD Zenbleed vulnerability -> MSR state to default
-* Fixed Syntax errors and word clarity in the main workaround file
-* Added a prompted reminder function using `at` to create a file in the home directory reminding the user to use the official patch due at that time and remove the workaround
 
 
 *Full [Changelog](Changelog.md)*
 
 
 ## Addtional Software
-* Scripts included to verify the implementation 
+* Scripts included to verify the implementation. Run before and after the repo Software.
     * Kernel vulnerablity diagnosis provided by [Stéphane Lesimple's](https://github.com/speed47) spectre-meltdown-checker
         * `chmod 750 spectre-meltdown-checker.sh`
         * You should only be left with the MCEPSC, Machine Check Exception on Page Size Change Vulnerability, [CVE-2018-12207](https://www.freebsd.org/security/advisories/FreeBSD-SA-19:25.mcepsc.asc)
@@ -74,14 +66,15 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 
 
 ## Zenbleed Workaround
-* *I could only do very limited testing on VM's, please submit issues!*
-* [Security Engineer's Discovery & Write-Up](https://lock.cmpxchg8b.com/zenbleed.html)
-* [Affects AMD Zen 2 Chipset Family](https://nakedsecurity.sophos.com/2023/07/26/zenbleed-how-the-quest-for-cpu-performance-could-put-your-passwords-at-risk/)
-* Mitigation/workaround suggested by discovering Security Engineer **will not work in Virtual Machines**
-* AMD has patched the Rome family, server oriented series, of CPU's but all others are expected in December of 2023.
-* The command to manually verify the chicken-bit has been set is `cpucontrol -m "0xc0011029" /dev/cpuctl0`
+* **Overview**
+    * [Security Engineer's Discovery & Write-Up](https://lock.cmpxchg8b.com/zenbleed.html)
+    * [Affects AMD Zen 2 Chipset Family](https://nakedsecurity.sophos.com/2023/07/26/zenbleed-how-the-quest-for-cpu-performance-could-put-your-passwords-at-risk/)
+    * Mitigation/workaround suggested by discovering Security Engineer **will not work in Virtual Machines**
+    * AMD has patched the Rome family, server oriented series, of CPU's but all others are expected in December of 2023.
+    * The command to manually verify the chicken-bit has been set is `cpucontrol -m "0xc0011029" /dev/cpuctl0`
+    * AMD Threadripper Pros are currently not being detected
 
-### Features
+### Zenbleed Workaround Features
 * Sets the Model Specific Register chicken-bit exactly as suggested by the discovering Security Engineer
 * Patches the latest AMD microcode from [Platomov's GitHub Repository](https://github.com/platomav/CPUMicrocodes/tree/master/AMD) if available for your Zen2 CPU, currently, only "Rome" series as of August 11, 2023.
 * If in a Virtual Machine, check for EPYC Rome series CPU and apply AMD patch and exit if not Rome, as there is no other patch available yet and Hypervisor disallows the workaround.
@@ -102,6 +95,7 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 
 ---
 
+
 ## Features
 
 * Makes backups of `rc.conf`, `sysctl.conf`, `login.conf`, and `loader.conf` on first run
@@ -118,7 +112,7 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 
 
 ## Requirements
-* FreeBSD 13.1, 13.2
+* GhostBSD 23.06.01
 * Python 3.9.16
 
 
@@ -128,10 +122,10 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 
 * Set `kernlevel = -1` if you want to test various setting groups with your applications and network
 * Customize `settings.ini`  to whatever is needed, the script will change the directive to your flag
-* Set permissions `chmod 750 harden-freebsd.py` to prevent shell injection from another account or process
+* Set permissions `chmod 750 harden-ghostbsd.py` to prevent shell injection from another account or process
 * Set permissions `chmod 640 settings.ini` to prevent shell injection from another account or process
 * No `settings.ini` section can be entirely commented out nor be completely empty
-* `./harden-freebsd.py`
+* `./harden-ghostbsd.py`
 
 
 ## Conf File Verification
@@ -154,7 +148,7 @@ zfs mount -a
 ## Customization
 
 #### 64bit vs 32bit
-Most tunable mitigations for 64bit are already included by default in FreeBSD 13.1 so 32bit directives were included for coverage. I can see no affect from setting the 32bit mitigations on 64bit systems, they are simply ignored. For clarity on unknown hardware, hardware mode, VM, or cloud use the following commands:
+Most tunable mitigations for 64bit are already included by default in GhostBSD 13.1 so 32bit directives were included for coverage. I can see no affect from setting the 32bit mitigations on 64bit systems, they are simply ignored. For clarity on unknown hardware, hardware mode, VM, or cloud use the following commands:
 * CPU: `sysctl hw.model hw.machine hw.ncpu`
 * Bits: `getconf LONG_BIT`
 
@@ -180,12 +174,12 @@ The newly applied settings will not take affect until you reset your password.
 
 ## Automatic Jail Lockdown/Management Strategies
 
-1. Set the correct paths to jailed confs in `harden-freebsd.py` lines 32-38 and run for each jail.
+1. Set the correct paths to jailed confs in `harden-ghostbsd.py` lines 32-38 and run for each jail.
 2. Copy software to `/root` and have jail start this script at reboot and all settings will be updated upon next reboot. To update all jails simply copy `settings.ini` with your own copy script to all appropriate locations for uptake. 
 
 `crontab -e`
 
-`@reboot /path/to/harden-freebsd.py`
+`@reboot /path/to/harden-ghostbsd.py`
 
 3. Have all jails pointing to the same rc script via `exec.start` and set paths in the script pointing to the same location modified by the script paths. 
 4. Add new jail specific entires to `settings.ini [SYSTEM]` section for sysctl.conf udpate
@@ -280,7 +274,14 @@ The newly applied settings will not take affect until you reset your password.
 
 ## License Summary
 
+### Software
 Non-Commercial usage, retain and forward author and license data. Modify existing code as needed up to 25% while allowing unlimited new additions. The Software may use or be used by other software.
+
+
+### Digital Art
+All Original Digital Artists recieve automatic Copyright. 
+* Supplemental License [here](digital art/Quadhelion Engineering Universal Digital Art License.md)
+* Eric Turgeon, GhostBSD Operating System, and GhostBSD Team are available to be granted free unlimited use of the Art, provided appropriate credit is given, contact me for details
 
 
 ## Security Guidelines
