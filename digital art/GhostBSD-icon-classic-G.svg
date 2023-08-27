@@ -50,9 +50,7 @@
             <circle cx="250.376" cy="249.471" r="126.1" style="fill:none;stroke:black;stroke-width:0.67px;stroke-dasharray:0.67,2.68,0.67,2.68,0.67,2.68;"/>
         </g>
     </g>
-    <g transform="matrix(1,0,0,1,-102.45,-44.5719)">
-        <g transform="matrix(100,0,0,100,281.945,240.473)">
-        </g>
-        <text x="220.845px" y="240.473px" style="font-family:'SnellRoundhand', 'Snell Roundhand';font-weight:500;font-style:italic;font-size:100px;">G</text>
+    <g transform="matrix(1,0,0,1,110.395,195.901)">
+        <text x="0px" y="0px" style="font-family:'SnellRoundhand', 'Snell Roundhand';font-weight:500;font-style:italic;font-size:100px;">G</text>
     </g>
 </svg>
