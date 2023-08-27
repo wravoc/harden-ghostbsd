@@ -125,7 +125,7 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 * Set permissions `chmod 750 harden-ghostbsd.py` to prevent shell injection from another account or process
 * Set permissions `chmod 640 settings.ini` to prevent shell injection from another account or process
 * No `settings.ini` section can be entirely commented out nor be completely empty
-* `./harden-ghostbsd.py`
+* `sudo ./harden-ghostbsd.py`
 
 
 ## Conf File Verification
