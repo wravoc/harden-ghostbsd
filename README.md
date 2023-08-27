@@ -11,12 +11,12 @@ Each of the security settings was researched, assessed, and chosen as a set of m
 ---
 ## Known Incompatibilities (Insecure)
 * **Firefox, Chromium** explicity uses shared memory, conflicts with `kern.elf64.allow_wx`
-* Linux Binary Compatability, VirtualBox shared folders, conflicts with `kern.securelevel`
+* Linux Binary Compatability, nginx, VirtualBox shared folders, conflicts with `kern.securelevel`
 
 
 ## Verified Compatible
-* Workstation: Librewolf, Evolution, RhythmBox, VLC, Abiword, Pluma, Gimp, Inkscape, Spacemacs, Git
-* Server: Apache, OpenSMTPD, MariaDB `have_dynamic_loading=YES`
+* **Workstation**: Librewolf, Evolution, RhythmBox, VLC, Abiword, Pluma, Gimp, Inkscape, Spacemacs, Git
+* **Server**: Apache, OpenSMTPD, MariaDB `have_dynamic_loading=YES`
 
 
 ---
