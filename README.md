@@ -281,7 +281,7 @@ Non-Commercial usage, retain and forward author and license data. Modify existin
 ### Digital Art
 All Original Digital Artists recieve automatic Copyright. 
 * Supplemental License [here](digital%20art/Quadhelion%20Engineering%20Universal%20Digital%20Art%20License.md)
-* Eric Turgeon via the GhostBSD Operating System and the GhostBSD Team meet the terms of Non-Commercial for purposes of this License.
+* Eric Turgeon via the GhostBSD Operating System and the GhostBSD Team meet the terms of Non-Commercial and are thus granted License.
 
 
 ## Security Guidelines
